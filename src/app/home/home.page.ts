@@ -16,7 +16,8 @@ export class HomePage {
     [7, 8, 9, 'x'],
     [4, 5, 6, '-'],
     [1, 2, 3, '+'],
-    [0, 'c', '/', '=']
+    [0, 'c', '/', '='],
+    ['ANTWORT', 'ANSWER', 'RISPOSTA', 'RESPUESTA']
   ];
 
   onButtonPress(symbol) {
@@ -34,7 +35,19 @@ export class HomePage {
       this.value = '0';
       this.readyForNewInput = true;
     }
+	else if (symbol === 'ANTWORT'
+	         || symbol === 'ANSWER'
+			 || symbol === 'RESPUESTA') {
+      this.value = '42';
+      this.readyForNewInput = false;
+    }
+	else if (symbol === 'RISPOSTA') {
+      this.value = 'O sole mio :))))';
+      this.readyForNewInput = false;
+    }
     else if (symbol === '=') {
+	  if (this.value === 'O sole mio :))))')
+		  this.value = '42';
       if (this.lastOperator === 'x')
         this.value = '' + (parseInt(this.oldValue) * parseInt(this.value));
       else if (this.lastOperator === '-')

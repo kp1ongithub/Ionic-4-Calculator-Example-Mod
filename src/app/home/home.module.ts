@@ -6,8 +6,11 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+import { AngularFittextModule } from 'angular-fittext';
+
 @NgModule({
   imports: [
+    AngularFittextModule,
     CommonModule,
     FormsModule,
     IonicModule,
