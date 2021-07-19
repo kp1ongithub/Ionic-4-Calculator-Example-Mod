@@ -4,9 +4,10 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { AngularFittextModule } from 'angular-fittext';
+
 import { HomePage } from './home.page';
 
-import { AngularFittextModule } from 'angular-fittext';
 
 @NgModule({
   imports: [
@@ -19,8 +20,9 @@ import { AngularFittextModule } from 'angular-fittext';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
   ],
   declarations: [HomePage]
 })
+
 export class HomePageModule {}

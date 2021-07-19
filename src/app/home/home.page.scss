@@ -9,3 +9,17 @@
     height: 64px;
     font-size: 32px;
 }
+
+.avatar {
+    width: min(10%);
+    width: max(50px);
+    border-radius: 50%;
+    padding: 3px;
+    margin: 8px;
+}
+
+.userField img:hover {
+    background-color: navajowhite;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
